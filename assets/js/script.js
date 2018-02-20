@@ -86,13 +86,13 @@ $(function(){
   var App = Backbone.View.extend({
 
     // Base the viw on an existing element
-    el: this.$('#main'),
+    el: $('#main'),
 
     initialize: function(){
 
       // Cache these selectors
-      this.total = this.$('#total span');
-      this.list = this.$('#services');
+      this.total = $('#total span');
+      this.list = $('#services');
 
       // Listen for the change event on the collection.
       // This is equivalent to listening on every one of the
