@@ -42,4 +42,33 @@ $(function(){
     new Service({ title: 'eternal damnation', price: 666 }),
   ]);
 
+  // This view turns a Service model into HTML. Will create li elements.
+  var ServiceView = Backbone.View.extend({
+    tagName: 'li',
+
+    events: {
+      'click': 'toggleService'
+    },
+
+    initialize: function(){
+      // Set up event listeners. the backbone synthetic change event
+      // is raised when a property changes (such as a checked field)
+
+      this.listenTo(this.model, 'change', this.render);
+    },
+
+    render: function(){
+      // Create the HTML
+      //
+      
+      this.$el.html('<input type="checkbox" value="1" name="' + this.model.get('title') + '"
+        this.$('input').prop('checked', this.model.get('checked'));
+
+        // Returning the object is a good practice
+        // that makes chaining possible
+        return this;
+    },
+
+  });
+
 });
