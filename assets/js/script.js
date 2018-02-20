@@ -9,12 +9,12 @@ $(function(){
     defaults: {
       name: 'My Service',
       price: 100,
-      isChecked: false
+      checked: false
     },
 
     // Helper function for checking/unchecking a service
     toggle: function(){
-      this.set('isChecked', !this.get('isChecked'));
+      this.set('checked', !this.get('checked'));
     }
 
   });
@@ -27,7 +27,7 @@ $(function(){
 
     // Return an array of the checked services
     getChecked: function(){
-      return this.where({isChecked:true});
+      return this.where({checked:true});
     }
   });
 
@@ -70,7 +70,7 @@ $(function(){
         + this.model.get('price') 
         + '</span>'
       ); 
-      this.$('input').prop('isChecked', this.model.get('isChecked'));
+      this.$('input').prop('checked', this.model.get('checked'));
 
       // Returning the object is a good practice
       // that makes chaining possible
