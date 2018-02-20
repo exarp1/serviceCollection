@@ -27,7 +27,7 @@ $(function(){
 
     // Return an array of the checked services
     getChecked: function(){
-      return this.where({checked:true});
+      return this.where({isChecked:true});
     }
   });
 
@@ -70,7 +70,7 @@ $(function(){
         + this.model.get('price') 
         + '</span>'
       ); 
-      this.$('input').prop('checked', this.model.get('checked'));
+      this.$('input').prop('isChecked', this.model.get('isChecked'));
 
       // Returning the object is a good practice
       // that makes chaining possible
