@@ -1,0 +1,33 @@
+{
+  "plugins": [
+    "backbone"
+    ],
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "backbone/collection-model": 1,
+    "backbone/defaults-on-top": 1,
+    "backbone/model-defaults": 1,
+    "backbone/no-constructor": 1,
+    "backbone/no-native-jquery": 1,
+    "indent": [
+      "error",
+      4
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
+  }
+}
